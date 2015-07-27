@@ -1,0 +1,18 @@
+.tooltip-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.tooltip-container .kaku-tooltip {
+  display: none;
+  position: absolute;
+  background: black;
+  color: white;
+  max-width: 200px;
+}
+.tooltip-container .kaku-tooltip.shown {
+  display: inline;
+}
