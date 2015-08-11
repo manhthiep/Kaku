@@ -1,5 +1,5 @@
 .sidebar {
-  @videoHeight: 140px;
+  @videoHeight: 220px;
   @controlsHeight: 25px;
 
   height: 100%;
@@ -7,11 +7,12 @@
 
   .menus {
     // 155px is the height of player
-    height: ~"calc(100% - @{videoHeight} - @{controlsHeight})";
+    // height: ~"calc(100% - @{videoHeight} - @{controlsHeight})";
+    height: ~"calc(100% - @{videoHeight})";
     overflow: auto;
 
     ul li {
-      font-size: 16px;
+      font-size: 14px;
       border-left: 5px solid #ffffff;
 
       &.seperator {

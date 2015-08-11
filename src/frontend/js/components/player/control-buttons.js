@@ -135,7 +135,7 @@ define(function(require) {
           <button
             className="backward-button"
             onClick={this._onBackwardButtonClick}
-            title="Play Previuos Track">
+            title="Play Previous Track">
               <i className="fa fa-fw fa-step-backward"></i>
           </button>
           <button

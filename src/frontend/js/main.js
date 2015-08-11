@@ -196,7 +196,6 @@ fetchRjsConfig().then(function(rjsConfig) {
               <div className="left">
                 <div className="sidebar">
                   <MenusContainer/>
-                  <PlayerContainer/>
                 </div>
               </div>
               <div className="right">
@@ -245,6 +244,7 @@ fetchRjsConfig().then(function(rjsConfig) {
                   </div>
                 </div>
               </div>
+              <PlayerContainer/>
             </div>
           </div>
         );

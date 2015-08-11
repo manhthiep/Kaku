@@ -199,10 +199,10 @@ Bootup.prototype = {
 
       // Create the browser window.
       mainWindow = new BrowserWindow({
-        'width': 1060,
-        'height': 600,
-        'min-width': 1060,
-        'min-height': 600,
+        'width': 1015,
+        'height': 620,
+        'min-width': 480,
+        'min-height': 360,
         'frame': false
       });
 

@@ -83,6 +83,11 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+    display: block;
+
+    @media only screen and (max-width : 768px) { 
+      display: none;
+    } 
 
     // to make autocomplete ul/li can cover stuffs under it
     z-index: 1;
