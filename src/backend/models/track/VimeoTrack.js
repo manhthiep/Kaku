@@ -19,6 +19,7 @@ define(function(require) {
     }
     else {
       this.title = options.name;
+      this.artist = (options.user) ? (options.user.name || 'Unknown Artist') : 'Unknown Artist';
       this.description = options.description;
       this.platformId = options.uri.match(/\d+$/)[0];
 

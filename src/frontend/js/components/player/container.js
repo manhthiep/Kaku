@@ -4,6 +4,7 @@ define(function(require) {
   var React = require('react');
   var PlayerControlButtons = require('components/player/control-buttons');
   var PlayerTrack = require('components/player/track');
+  var KakuCore = require('backend/modules/KakuCore');
 
   var visibleStyle = {
     'display': 'block'
@@ -38,6 +39,7 @@ define(function(require) {
 
     getInitialState: function(){
       return {
+        playerTitle: '',
         playerSize: 'small', 
         windowWidth: window.innerWidth, 
         windowHeight: window.innerHeight
@@ -53,6 +55,11 @@ define(function(require) {
 
     componentDidMount: function() {
       window.addEventListener('resize', this.handleWindowResize);
+      KakuCore.on('playerTrackUpdated', (track) => {
+        this.setState({
+          playerTitle: track.title
+        });
+      });
     },
 
     componentWillUnmount: function() {
@@ -91,6 +98,9 @@ define(function(require) {
               style={(this.state.playerSize == 'small') ? hiddenStyle : visibleStyle}>
                 <i className="fa fa-fw fa-compress"></i>
             </button>
+          </div>
+          <div className="playerTitle">
+            <span>{this.state.playerTitle}</span>
           </div>
         </div>
       );

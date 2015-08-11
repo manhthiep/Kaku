@@ -18,6 +18,7 @@ define(function(require) {
       console.error(options);
     } else {
       this.title = options.snippet.title;
+      this.artist = (options.snippet.channelTitle || 'Unknown Artist');
       this.description = options.snippet.description;
       this.platformId = options.id.videoId;
 

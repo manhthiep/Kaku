@@ -398,6 +398,8 @@ define(function(require) {
               this._player.play();
               this._toggleSpinner(false);
 
+	      KakuCore.emit('playerTrackUpdated', realTrack);
+	      
               // keep this track into history
               HistoryManager.add(realTrack);
 

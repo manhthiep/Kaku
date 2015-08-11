@@ -3,20 +3,23 @@
   @controlsHeight: 25px;
 
   height: 100%;
-  border-right: 1px solid #cccccc;
+  border-right: 1px solid #313640;
 
   .menus {
     // 155px is the height of player
     // height: ~"calc(100% - @{videoHeight} - @{controlsHeight})";
     height: ~"calc(100% - @{videoHeight})";
     overflow: auto;
+    background-color: #313640;
+    color: white;
 
     ul li {
       font-size: 14px;
-      border-left: 5px solid #ffffff;
+      // border-left: 5px solid #ffffff;
+      border-left: 3px solid #313640;
 
       &.seperator {
-        border-bottom: 1px solid #cccccc;
+        border-bottom: 1px solid #4A5262;
         margin: 5px 0;
       }
 
@@ -27,8 +30,10 @@
       }
 
       &.active {
-        border-left-color: #93c6f2;
-        background-color: #d9f8fa;
+        // border-left-color: #93c6f2;
+        // background-color: #d9f8fa;
+        border-left-color: #ffffff;
+        background-color: #282D36;
         transition: background-color 0.2s ease-in-out;
       }
 
@@ -38,63 +43,12 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        color: #ffffff;
       }
 
       .icon {
         margin-right: 5px;
       }
-    }
-  }
-
-  .player {
-
-    .track {
-      width: 200px;
-      height: 200px;
-      background-image: url(../images/track-placeholder.png);
-      background-color: #efefef;
-      background-size: 100%;
-    }
-
-    .control-buttons {
-      button {
-        outline: none;
-        border: 0;
-        width: calc(100% / 6); // we have 6 buttons
-        color: #ccc; // sync with videojs's style
-        background-color: #000;
-        // there are some unconsistent styles on Windows,
-        // so we have to override it directly.
-        padding: 2px 6px 3px;
-      }
-
-      button:active {
-        background-color: #444;
-      }
-
-      button:hover {
-        color: lighten(#ccc, 10%);
-      }
-
-      // We need to additionally align the mode word
-      button.repeat-button {
-        position: relative;
-
-        .mode {
-          position: absolute;
-          bottom: 0;
-          right: 8px;
-          font-size: 10px;
-          background-color: rgba(0, 0, 0, 0.7);
-        }
-      }
-    }
-
-    #player {
-      // to make spinner at the right place
-      position: relative;
-      // We have to override its height directly
-      height: @videoHeight;
     }
   }
 }
